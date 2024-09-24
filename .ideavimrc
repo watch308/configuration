@@ -24,7 +24,21 @@ set clipboard+=unnamed
 :set keep-english-in-normal
 ":set keep-english-in-normal-and-restore-in-insert
 
+nnoremap x "_x
+nnoremap X "_X
+nnoremap d "_d
+nnoremap dd "_dd
+nnoremap D "_D
+vnoremap d "_d
+vnoremap dd "_dd
 
+nnoremap <leader>x ""x
+nnoremap <leader>X ""X
+nnoremap <leader>d ""d
+nnoremap <leader>dd ""dd
+nnoremap <leader>D ""D
+vnoremap <leader>d ""d
+vnoremap <leader>dd ""dd
 
 
 "哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
