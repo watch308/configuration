@@ -1,47 +1,94 @@
 
+"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+"共享剪切板
+"set clipboard+=unnamed
+
+"保持英文
+:set keep-english-in-normal
+":set keep-english-in-normal-and-restore-in-insert
+
+"nnoremap X "_X
+"nnoremap x "_x
+"nnoremap d "_d
+"nnoremap dd "_dd
+"nnoremap D "_D
+"vnoremap d "_d
+"vnoremap dd "_dd
+"let g:WhichKeyDesc_commentray_prefix = "dd"
+"
+"nnoremap <leader>x ""x
+"nnoremap <leader>X ""X
+"nnoremap <leader>d ""d
+"nnoremap <leader>dd ""dd
+"nnoremap <leader>D ""D
+"vnoremap <leader>d ""d
+"vnoremap <leader>dd ""dd
+
+
+sethandler <C-C> a:vim    
+" ctrl+c 快捷键后台使用vim管理
+sethandler <C-X> a:ide    
+" ctrl+x 快捷键后台使用ide管理，和平时一样正常用
+sethandler <C-S-v> a:vim  
+" ctrl+shift+v 快捷键后台使用vim管理
+map <C-c> "+y             
+" ctrl+c 和平时一样正常用
+map <C-S-v> "+p           
+" ctrl+shift+v 在vim映射到粘贴，代替平时的 ctrl+v
+
+
+
+
+sethandler <C-2> a:vim
+sethandler <C-S-2> a:vim
+sethandler <C-6> a:vim
+sethandler <C-S-6> a:vim
+sethandler <C-A> a:vim
+sethandler <C-B> a:vim
+sethandler <C-C> a:vim
+sethandler <C-D> a:vim
+sethandler <C-E> a:vim
+sethandler <C-F> a:vim
+sethandler <C-G> a:vim
+sethandler <C-H> a:vim
+sethandler <C-I> a:vim
+sethandler <C-J> a:vim
+sethandler <C-K> a:vim
+sethandler <C-L> a:vim
+sethandler <C-M> a:vim
+sethandler <C-O> a:vim
+sethandler <C-Q> a:vim
+sethandler <C-R> a:vim
+sethandler <C-T> a:vim
+sethandler <C-U> a:vim
+sethandler <C-V> a:vim
+sethandler <C-W> a:vim
+sethandler <C-Y> a:vim
+sethandler <C-[> a:vim
+sethandler <C-\> a:vim
+sethandler <C-]> a:vim
+sethandler <C-N> a:ide
+sethandler <C-P> a:ide
+sethandler <C-S> a:ide
+sethandler <C-X> a:ide
+
+"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
 "该“中文版”指whichkey的窗口提示为中文
+"另外一个版本的供各位拿去装逼用[Doge]
 
 " ================================================================================================
 " 🍰🍰🍰 Extensions 🍰🍰🍰
 " ================================================================================================
-"这两个插件，只有写了↓，idea会自动下载：
 Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
 
-"下列插件需要在IDEA中下载:
+"下列插件需要在IDEA中下载
 "ideaVim
 "IdeaVim-EasyMotion
 "IdeaVimExtension
 "which-key
 "CodeGlance Pro
 "TranslateAction
-
-"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-"共享剪切板
-set clipboard+=unnamed
-
-"保持英文
-:set keep-english-in-normal
-":set keep-english-in-normal-and-restore-in-insert
-
-nnoremap x "_x
-nnoremap X "_X
-nnoremap d "_d
-nnoremap dd "_dd
-nnoremap D "_D
-vnoremap d "_d
-vnoremap dd "_dd
-
-nnoremap <leader>x ""x
-nnoremap <leader>X ""X
-nnoremap <leader>d ""d
-nnoremap <leader>dd ""dd
-nnoremap <leader>D ""D
-vnoremap <leader>d ""d
-vnoremap <leader>dd ""dd
-
-
-"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
 
 
 
@@ -51,7 +98,7 @@ vnoremap <leader>dd ""dd
 
 set easymotion
 "设置在光标距离窗口顶部或底部一定行数时，开始滚动屏幕内容的行为
-set scrolloff=10
+set scrolloff=5
 
 "--递增搜索功能：在执行搜索（使用 / 或 ? 命令）时，
 "Vim 会在您输入搜索模式的过程中逐步匹配并高亮显示匹配的文本。
@@ -152,7 +199,7 @@ set notimeout
 
 
 " ================================================================================================
-" 🌞🌞🌞 目录-食用手册 🌞🌞🌞//配置代码在目录下面
+" 🌞🌞🌞 目录-食用手册 🌞🌞🌞
 " ================================================================================================
 
 "===================================== A =====================================
@@ -187,7 +234,6 @@ set notimeout
 " gs: GenerateSetter-生成setter函数
 " ga: GenerateGetterAndSetter-生成getter和setter函数
 " ge: GenerateEquals-生成equals和hashcode的重写方法
-" go: OverrideMethods-生成重写方法
 " gd: ShowTabbedFileHistory-显示文件的版本控制历史(git)
 "===================================== H =====================================
 " h: MoveToLeftMoveToLeft-跳转到左边的分割窗口
@@ -248,7 +294,7 @@ set notimeout
 " wh: MoveToLeft-跳转到左边的窗口(<c-w>h)
 " wk: MoveToUp-跳转到上边的窗口(<c-w>k)
 " wj: MoveToDown-跳转到下边的窗口(<c-w>j)
-" wwa: HideActiveWindow-关闭提示窗口(Shift+Esc)
+" ww: HideAllWindows-隐藏/显示活动窗口(Ctrl+Shift+F12)
 "===================================== X =====================================
 " x:
 "===================================== Y =====================================
@@ -267,18 +313,15 @@ set notimeout
 " ================================================================================================
 " 🌟🌟🌟 <leader>详细配置 🌟🌟🌟
 " ================================================================================================
-
 "========= NULL ========
 "这一行为在按下<leader>后显示的,甭管就行
 let g:WhichKeyDesc_LeaderKeymap= "<leader> 🌟🌟🌟紫色为二级目录🌟🌟🌟"
-
-"========== a ==========
 
 
 "========== b ==========
 
 
-"========== c ==========
+"========== c =========c
 let g:WhichKeyDesc_CodeAndClose = "<leader>c Code&关闭"
 
 "关闭所有标签页
@@ -296,6 +339,7 @@ nmap <leader>co :action CloseAllEditorsButActive<CR>
 
 
 "========== d ==========
+
 let g:WhichKeyDesc_DeBugOrDelete= "<leader>d 调试&删除"
 "打断点/解除断点
 let g:WhichKeyDesc_DebugOrDelete_BreakPoint = "<leader>dp 打断点/解除断点 "
@@ -356,15 +400,11 @@ nmap <leader>ga <action>(GenerateGetterAndSetter)
 let g:WhichKeyDesc_GitOrGenerate_GenerateEquals = "<leader>ge 生成equals和hashcode的重写"
 nmap <leader>ge <action>(GenerateEquals)
 "生成toString
-let g:WhichKeyDesc_GitOrGenerate_GenerateToString = "<leader>ge 生成toString"
+let g:WhichKeyDesc_GitOrGenerate_GenerateToString = "<leader>gt 生成toString"
 nmap <leader>gt <action>(Actions.ActionsPlugin.GenerateToString)
 "diff 显示文件的版本控制历史(git)
 nmap <leader>gd <action>(Vcs.ShowTabbedFileHistory)
 let g:WhichKeyDesc_DebugOrDelete_ShowTabbedFileHistory = "<leader>gd 显示文件的版本控制历史"
-"生成重写方法
-nmap <leader>go <action>(OverrideMethods)
-let g:WhichKeyDesc_DebugOrDelete_OverrideMethods = "<leader>go 生成重写方法"
-
 
 
 "========== h ==========
@@ -401,13 +441,14 @@ nmap <leader>l <c-w>l
 "打开/关闭 代码小地图
 let g:WhichKeyDesc_CodeGlance = "<leader>m 开关小地图"
 nmap <leader>m <action>(CodeGlance.toggle)
+"好像更新版本后,突然用不了了,用默认的ctrl+shift+G吧
 
 
 "========== n ==========
 let g:WhichKeyDesc_NERDTreeOrNew = "<leader>n 目录树&新建"
 
 "取消搜索高亮显示(No Highlight)
-let g:WhichKeyDesc_NERDTreeOrNew_Highlight = "<leader>nh 取消搜索高亮"
+let g:WhichKeyDesc_NERDTreeOrNew_Highlight = "<leader>nl 取消搜索高亮"
 nmap <leader>nl :nohlsearch<CR>
 "在当前目录新建文件夹
 let g:WhichKeyDesc_NERDTreeOrNew_NewDir = "<leader>nd 新建文件夹"
@@ -466,7 +507,7 @@ let g:WhichKeyDesc_Show_ParameterInfo = "<leader>sp 显示方法或函数的参�
 nmap <leader>sp <action>(ParameterInfo)
 "Stop
 let g:WhichKeyDesc_Show_Stop = "<leader>st 停止运行"
-nmap <leader>st <action>(Stop) <action>(Stop)
+nmap <leader>st <action>(Stop)
 
 
 "========= t ==========
@@ -478,7 +519,6 @@ vmap <leader>t <action>($EditorTranslateAction)
 
 "========== w ==========
 let g:WhichKeyDesc_Windows = "<leader>w 窗口"
-let g:WhichKeyDesc_Windows_Hide = "<leader>ww 关闭提示窗口->a"
 let g:WhichKeyDesc_Windows_Move = "<leader>wm 移动窗口"
 
 "向右拆分标签页
@@ -504,10 +544,9 @@ nmap <leader>wc <c-w>c
 let g:WhichKeyDesc_Windows_Unsplit = "<leader>wu 取消拆分当前分割窗口"
 nmap <leader>wu <action>(Unsplit)
 
-"关闭提示窗口
-let g:WhichKeyDesc_Windows_Hide_HideActiveWindow = "<leader>wwa 关闭提示窗口"
-nmap <leader>wwa <action>(HideActiveWindow)
-
+"隐藏/显示窗口
+let g:WhichKeyDesc_Windows_Hide_HideActiveWindow = "<leader>ww 隐藏/显示活动窗口"
+nmap <leader>ww <action>(HideAllWindows)
 
 
 "========== y ==========
@@ -542,6 +581,7 @@ nmap <leader>zc <action>(CollapseAllRegions)
 "光标在目录时，按Esc回到编辑器
 "编辑器和目录间切换存在许多功能类似的快捷键，相似但不完全相同
 
+"仅 打开/关闭 目录推荐使用<leader>wo 其次 Alt + 1
 
 
 "按下 <leader>nn 将使焦点转移到 NERDTree 窗口
@@ -564,6 +604,6 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 let g:WhichKeyDesc_easymotionkey = "<leader><leader> 快速跳转插件"
 
-
-nmap s <Plug>(easymotion-s)
+"普通模式输入s后输入要跳转到单词首字母(或多输入几个字母)
+nmap s <Plug>(easymotion-bd-n)
 let g:WhichKeyDesc_easymotion = "s 快速跳转"
